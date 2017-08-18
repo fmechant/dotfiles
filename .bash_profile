@@ -25,7 +25,9 @@ for option in autocd globstar; do
 done;
 
 # Add tab completion for many Bash commands
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+  . /usr/local/share/bash-completion/bash_completion
+fi
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
