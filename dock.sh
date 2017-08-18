@@ -3,7 +3,6 @@
 # Sets up the dock like I want it
 
 dockutil --no-restart --remove all
-dockutil --no-restart --add "/System/Library/CoreServices/Finder.ap"
 dockutil --no-restart --add "/Applications/Launchpad.app"
 dockutil --no-restart --add "/Applications/Airmail 3.app"
 dockutil --no-restart --add "/Applications/Fantastical 2.app"
