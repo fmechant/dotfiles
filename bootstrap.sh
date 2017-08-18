@@ -62,7 +62,7 @@ fi
 
 update_list=$(softwareupdate --list 2>&1)
 
-if [ $update_list != *"No new software available"* ]; then
+if [[ $update_list != *"No new software available"* ]]; then
   bootstrap_echo "Your system has updates available. Updating the system. Please
 provide your password when asked. Reboot when needed and restart the
 bootstrap script."
@@ -78,7 +78,7 @@ fi
 
 if [ ! -d "$COMMANDLINE_TOOLS" ]; then
   bootstrap_echo "Apple's command line developer tools must be installed. It
-contains git that we need to clone the dotfiles. Please follow the prompts and 
+contains git that we need to clone the dotfiles. Please follow the prompts and
 select 'install'. Once the command line tools have been installed, run this
 script again to complete the bootstrap."
   xcode-select --install
