@@ -50,7 +50,7 @@ brew install awscli
 brew install elm
 brew install elm-format
 brew install node
-
+brew install mas
 
 # Remove outdated versions from the cellar.
 brew cleanup
